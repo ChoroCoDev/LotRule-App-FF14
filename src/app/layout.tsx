@@ -1,18 +1,17 @@
-import './globals.css'
+'use client'
+import { useEffect, useState } from 'react'
+import { connect } from 'mongoose'
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const [jobs, setJobs] = useState()
+
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang='en'>
       <head />
-      <body>{children}</body>
+      <body>
+        {children}
+        <div>{jobs}</div>
+      </body>
     </html>
   )
 }

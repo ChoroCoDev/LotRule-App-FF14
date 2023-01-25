@@ -1,0 +1,1 @@
+export { jobModel } from './Job'

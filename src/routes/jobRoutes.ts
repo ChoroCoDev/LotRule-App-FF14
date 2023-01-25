@@ -1,6 +1,9 @@
-const express = require('express')
+import express from 'express'
+import { jobModel } from '../models'
+
+// const express = require('express')
+// const jobModel = require('../models/Job')
 const app = express()
-const jobModel = require('../models/Job')
 
 app.use(express.json())
 
@@ -31,7 +34,7 @@ app.post('/job', async (req, res) => {
 app.patch('/job/:id', async (req, res) => {
   try {
     await jobModel.findByIdAndUpdate(req.params.id, req.body)
-    await jobModel.save()
+    await jobModel.updateOne()
   } catch (err) {
     res.status(500).send(err)
   }

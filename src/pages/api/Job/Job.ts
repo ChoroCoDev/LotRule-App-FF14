@@ -1,6 +1,12 @@
-const mongoose = require('mongoose')
+import { Schema, model } from 'mongoose'
 
-const JobSchema = new mongoose.Schema({
+interface Job {
+  name: string
+  abb: string
+  role: string
+}
+
+const JobSchema = new Schema<Job>({
   name: {
     type: String,
     required: true,
@@ -17,6 +23,4 @@ const JobSchema = new mongoose.Schema({
   },
 })
 
-const Job = mongoose.model('Job', JobSchema)
-
-module.exports = Job
+export const jobModel = model('Job', JobSchema)
