@@ -24,8 +24,6 @@ const jobs: JobSet[] = [
   new JobSet('DPS', new JobParams('青魔導士', '青'), new JobParams('BlueMage', 'BLU')),
 ]
 
-const JobList = async (req: NextApiRequest, res: NextApiResponse) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
   res.status(200).json(jobs)
 }
-
-export { JobList, JobParams, JobSet }
