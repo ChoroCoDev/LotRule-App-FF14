@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { JobParams } from './JobParams'
-import { JobSet } from './JobSet'
+import { JobParams, JobSet } from '@/class'
 
 const jobs: JobSet[] = [
   new JobSet('Tank', new JobParams('ナイト', 'ナ'), new JobParams('Paladin', 'PLD')),
@@ -26,7 +25,7 @@ const jobs: JobSet[] = [
 ]
 
 const JobList = async (req: NextApiRequest, res: NextApiResponse) => {
-  return res.status(200).json(jobs)
+  res.status(200).json(jobs)
 }
 
 export { JobList, JobParams, JobSet }
