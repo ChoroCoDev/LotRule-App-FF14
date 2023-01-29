@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <h1>Hello LotRuleAppFF14</h1>
-      <Link href='/jobs'>JobList</Link>
+      <Link href='/jobset'>JobSet</Link>
     </>
   )
 }
