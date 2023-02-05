@@ -1,3 +1,4 @@
+import { Button } from '@mui/material'
 import { connect } from 'mongoose'
 import Link from 'next/link'
 
@@ -12,6 +13,9 @@ export default function Home() {
     <>
       <h1>Hello LotRuleAppFF14</h1>
       <Link href='/jobset'>JobSet</Link>
+      <>
+        <Button variant='contained'>Hello World</Button>
+      </>
     </>
   )
 }

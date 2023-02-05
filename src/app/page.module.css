@@ -269,3 +269,7 @@
     transform: rotate(0deg);
   }
 }
+
+.job-dd {
+  min-width: 120;
+}

@@ -8,7 +8,7 @@ const Melee = 'Melee'
 const Ranged = 'Ranged'
 const Magic = 'Magic'
 
-const Jobs: FF14Job[] = [
+export const Jobs: FF14Job[] = [
   new FF14Job(1, T, { jp: 'ナイト', en: 'Paladin' }, { jp: 'ナ', en: 'PLD' }),
   new FF14Job(2, T, { jp: '戦士', en: 'Warrior' }, { jp: '戦', en: 'WAR' }),
   new FF14Job(3, T, { jp: '暗黒騎士', en: 'Dark Knight' }, { jp: '暗', en: 'DRK' }),

@@ -11,3 +11,5 @@ export const InputText = ({ label, id, defaultValue = '' }: { label: string; id:
     </>
   )
 }
+
+export default InputText
